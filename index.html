@@ -1,2 +1,9 @@
 <script src="weave.js"></script>
-<weave>p"Hello World"</weave>
+<weave>
+  p#count 0
+  br
+  button"Click Me" 
+    { count: 0,
+      onClick: function () {this.count++; weave('#count '+this.count)}
+    }
+</weave>
