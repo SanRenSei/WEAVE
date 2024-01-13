@@ -161,8 +161,8 @@ let findCompleteObject =(inputString) => {
   return matches ? matches[0] : null;
 }
 
-window.weave = (str) => {
-  let tokens = tokenizeWeaveCode(str);
+window.weave = (...str) => {
+  let tokens = tokenizeWeaveCode(str.join(' '));
   updateObjects(tokens);
 }
 
